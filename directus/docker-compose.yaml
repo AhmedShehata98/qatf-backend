@@ -29,6 +29,8 @@ services:
 
   directus:
     image: directus/directus:11.6.1
+    env_file:
+      - .env
     ports:
       - ${DIRECTUS_PORT}:8055
     volumes:
